@@ -1,30 +1,43 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.login{
+/* .login {
   display: flex;
   flex-direction: column;
   width: 400px;
-  margin:20px auto;
-  transform: translate(0%,50%);
+  margin: 20px auto;
+  transform: translate(0%, 50%);
   gap: 10px;
   justify-content: center;
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0px 0px 4px 5px #eee;
-}
-.login h1{
+} */
+.login h1 {
   text-align: center;
+  transform: translate(0%,300%);
+  /* margin-top: 100px; */
 }
-.login form{
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 20px auto;
+  transform: translate(0%, 50%);
+  gap: 10px;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 5px #eee;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.login input{
+input,
+textarea {
   width: 70%;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -33,34 +46,44 @@
   margin-bottom: 15px;
   outline: 0;
 }
-.login input:hover{
+input:hover {
   box-shadow: 0px 0px 3px 3px #eee;
 }
-.login label{
+label {
   padding-left: 50px;
 }
-.btn{
+.btns{
+  display: flex;
+  /* justify-content: space-between; */
+  /* gap: 10px; */
+  margin: auto;
+  /* width: 400px; */
+  transform: translate(-30%,0%);
+}
+.btns .btn{
+  margin-left: 140px;
+}
+.btn {
   width: 100px;
   display: inline;
   border-radius: 5px;
   margin-left: 190px;
 }
-.btn:hover{
+.btn:hover {
   background: #777;
 }
-.quantity{
-  display:flex;
-  width:200px;
-  justify-content:space-evenly;
-  gap:10px;
+.quantity {
+  display: flex;
+  width: 200px;
+  justify-content: space-evenly;
+  gap: 10px;
   /* padding: 10px; */
   margin: 15px auto;
-  
 }
-button{
-  color:white;
+button {
+  color: white;
   background: black;
-  width: 30px;;
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 0;
@@ -68,27 +91,26 @@ button{
   line-height: 20px;
   padding-bottom: 3px;
   cursor: pointer;
-
 }
-button:hover{
-  background: rgb(249, 155, 155);;
+button:hover {
+  background: rgb(249, 155, 155);
   /* color: black; */
 }
-.disable{
+.disable {
   cursor: not-allowed;
   background: rgba(0, 0, 0, 0.532);
 }
-.disable:hover{
+.disable:hover {
   background: rgba(0, 0, 0, 0.532);
 }
-.products{
+.products {
   display: flex;
   /* width:100%; */
-  gap:20px;
+  gap: 20px;
   flex-wrap: wrap;
   margin: 20px;
 }
-.card{
+.card {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -96,29 +118,61 @@ button:hover{
   border-radius: 5px;
   overflow: hidden;
   background: #efefef;
+  padding: 10px;
+  gap: 10px;
+  color: teal;
 }
-.card img{
+.card img {
   width: 100%;
   height: 170px;
   border-radius: 5px;
 }
-.card h2{
+.card h2 {
   font-size: 20px;
   font-weight: 700;
   color: #777;
-  padding:0 5px;
+  padding: 0 5px;
   margin-top: 15px;
 }
-.card h4{
-  padding:5px 15px;
+.card h4 {
+  padding: 5px 15px;
   font-size: 15px;
   font-weight: 700;
   /* color: #777; */
 }
-.card p{
-  padding:0 15px;
+.card p {
+  padding: 0 15px;
   font-size: 15px;
   font-weight: 700;
   color: red;
 }
 
+.context {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0%, 20%);
+  gap: 10px;
+  margin: auto;
+  text-align: center;
+  background: black;
+  padding: 20px 10px;
+  color: white;
+  border-radius: 15px;
+}
+
+.posts {
+  margin: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.post {
+  background: #f3f1f1;
+  margin: 20px 10px;
+  padding: 20px;
+  color: teal;
+  border-radius: 7px;
+}

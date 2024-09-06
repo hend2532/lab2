@@ -8,25 +8,25 @@ class Quantity extends Component{
         }
         // this.increment=this.increment.bind(this)
     }
+     increment=()=>{
+        this.setState({
+            quantity:this.state.quantity+1
+            
+        })
+    }
+     decrement=()=>{
+        if(this.state.quantity>1){
+        this.setState({
+            quantity:this.state.quantity-1
+        })
+    }
+    }
     render(){
-        const increment=()=>{
-            this.setState({
-                quantity:this.state.quantity+1
-                
-            })
-        }
-        const decrement=()=>{
-            if(this.state.quantity>1){
-            this.setState({
-                quantity:this.state.quantity-1
-            })
-        }
-        }
         return(
             <div className="quantity">
-                <button className={this.state.quantity===1 && "disable"} onClick={decrement}>-</button>
+                <button className={this.state.quantity===1 && "disable"} onClick={this.decrement}>-</button>
                 <span>{this.state.quantity}</span>
-                <button onClick={increment}>+</button>
+                <button onClick={this.increment}>+</button>
             </div>
         )
     }
